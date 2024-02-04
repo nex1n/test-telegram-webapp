@@ -26,16 +26,15 @@
 			function setThemeClass() {
             	document.documentElement.className = Telegram.WebApp.colorScheme;
         	}
-        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
-        setThemeClass();
-		let btn = document.getElementById("btn");
- 
-		btn.addEventListener("click", function(){
-			tg.MainButton.setText("Сообщение отправлено!");
-			tg.MainButton.show();
-			tg.sendData("sendTestMessage");
-		});
-			
+			Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+			setThemeClass();
+			let btn = document.getElementById("btn");
+	
+			btn.addEventListener("click", function(){
+				tg.MainButton.setText("Сообщение отправлено!");
+				tg.sendData("sendTestMessage");
+				tg.MainButton.show();
+			});
 		</script>
 	</body>
 </html>
